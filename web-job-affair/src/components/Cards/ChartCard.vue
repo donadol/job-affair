@@ -16,6 +16,7 @@
     </md-card-actions>
   </md-card>
 </template>
+
 <script>
 export default {
   name: "chart-card",
@@ -69,7 +70,7 @@ export default {
      */
     initChart(Chartist) {
       var chartIdQuery = `#${this.chartId}`;
-      Chartist[this.chartType](chartIdQuery, this.chartData, this.chartOptions);
+      Chartist[this.chartType](chartIdQuery, this.chartData, this.chartOptions, this.chartResponsiveOptions);
     },
     /***
      * Assigns a random id to the chart
@@ -91,6 +92,19 @@ export default {
         this.initChart(ChartistLib);
       });
     });
+  },
+  watch: {
+    chartData() {
+      import("chartist").then(Chartist => {
+        let ChartistLib = Chartist.default || Chartist;
+        this.initChart(ChartistLib);
+      });
+    }
   }
 };
 </script>
+<style scoped>
+  .ct-chart {
+    height: 300px;
+  }
+</style>
