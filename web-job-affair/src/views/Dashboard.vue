@@ -3,7 +3,7 @@
     <div class="md-layout">
       <div
         class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-33"
-        v-for="job in this.jobs.results"
+        v-for="job in this.results"
         :key="job.id"
       >
         <job-card
@@ -16,6 +16,11 @@
         >
         </job-card>
       </div>
+    </div>
+    <div class="button">
+      <md-button class="md-raised" @click="nextPage()">
+        Load More
+      </md-button>
     </div>
   </div>
 </template>
@@ -32,16 +37,29 @@ export default {
     return {};
   },
   computed: {
-    ...mapState("jobs", ["jobs"])
+    ...mapState("jobs", ["results", "size", "total"])
   },
   mounted() {
     this.getJobs({ size: 9, offset: 0 });
   },
   methods: {
-    ...mapActions("jobs", ["getJobs"])
-  },
-  computed: {
-    ...mapState("jobs", ["jobs"])
+    ...mapActions("jobs", ["getJobs"]),
+    nextPage() {
+      if (this.size > this.total) {
+        alert("No more jobs");
+        return;
+      }
+
+      this.getJobs({ size: 9, offset: this.size });
+    }
   }
 };
 </script>
+
+<style scoped>
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
