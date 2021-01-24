@@ -4,12 +4,14 @@ import { runSaga, stdChannel } from "redux-saga";
 import sagas from "@/sagas";
 
 import jobs from "@/store/modules/jobs";
+import people from "@/store/modules/people";
 
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
   modules: {
-    jobs
+    jobs,
+    people
   }
 });
 
