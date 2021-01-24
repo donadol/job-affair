@@ -9,6 +9,10 @@ import NavTabsTable from "./Tables/NavTabsTable.vue";
 import OrderedTable from "./Tables/OrderedTable.vue";
 import SimpleTable from "./Tables/SimpleTable.vue";
 
+// User
+import UserCard from "./UserProfile/UserCard.vue"
+import EditProfileForm from "./UserProfile/EditProfileForm.vue"
+
 export {
   ChartCard,
   NavTabsCard,
@@ -16,5 +20,7 @@ export {
   JobCard,
   NavTabsTable,
   OrderedTable,
-  SimpleTable
+  SimpleTable,
+  UserCard,
+  EditProfileForm
 };

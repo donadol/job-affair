@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { EditProfileForm, UserCard } from "@/views/";
+import { EditProfileForm, UserCard } from "@/components";
 
 export default {
   components: {
