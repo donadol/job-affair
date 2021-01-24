@@ -19,7 +19,6 @@
 </template>
 <script>
 import StatsCard from "./StatsCard";
-import JOB_TYPES from "@/models/jobtypes";
 
 export default {
   name: "job-card",
@@ -29,7 +28,7 @@ export default {
   props: {
     image: {
       type: String,
-      default: require("@/assets/img/faces/marc.jpg")
+      default: require("@/assets/img/unknown.png")
     },
     type: {
       type: String,
@@ -74,5 +73,8 @@ export default {
 .img {
   width: 70px;
   margin: 0;
+}
+.md-card-content > h3 {
+  height: 120px;
 }
 </style>
