@@ -15,7 +15,7 @@ export const getMostCommonSkills = state => {
         right: 15,
         bottom: 10,
         left: 10
-      },
+      }
     },
     responsiveOptions: [
       [
@@ -46,7 +46,7 @@ export const getMostCommonSkills = state => {
     return { data, settings };
   }
 
-  skills.sort((a,b) => (a.total < b.total) ? 1 : ((b.total < a.total) ? -1 : 0));
+  skills.sort((a, b) => (a.total < b.total ? 1 : b.total < a.total ? -1 : 0));
 
   let items = skills.slice(0, 5);
   for (let item of items) {
@@ -55,7 +55,7 @@ export const getMostCommonSkills = state => {
   }
 
   return { data, settings };
-}
+};
 
 export const getMoreOpenTo = state => {
   let data = {
@@ -69,11 +69,7 @@ export const getMoreOpenTo = state => {
       donutWidth: 60,
       startAngle: 270
     },
-    responsiveOptions: [
-      [
-        "screen and (max-width: 640px)",
-      ]
-    ]
+    responsiveOptions: [["screen and (max-width: 640px)"]]
   };
 
   if (state.aggregators == undefined) {
@@ -97,7 +93,7 @@ export const getMoreOpenTo = state => {
   }
 
   return { data, settings };
-}
+};
 
 export const getRemoter = state => {
   let data = {
@@ -106,13 +102,8 @@ export const getRemoter = state => {
   };
 
   const settings = {
-    options: {
-    },
-    responsiveOptions: [
-      [
-        "screen and (max-width: 640px)",
-      ]
-    ]
+    options: {},
+    responsiveOptions: [["screen and (max-width: 640px)"]]
   };
 
   if (state.aggregators == undefined) {
@@ -136,8 +127,7 @@ export const getRemoter = state => {
   }
 
   return { data, settings };
-}
-
+};
 
 export const getCompensationRange = state => {
   let data = {
@@ -156,7 +146,7 @@ export const getCompensationRange = state => {
         right: 15,
         bottom: 10,
         left: 10
-      },
+      }
     },
     responsiveOptions: [
       [
@@ -193,8 +183,5 @@ export const getCompensationRange = state => {
     data.series[0].push(item.total);
   }
 
-  console.log({ data, settings })
-
   return { data, settings };
-}
-
+};

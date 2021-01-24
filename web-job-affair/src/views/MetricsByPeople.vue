@@ -5,7 +5,9 @@
         <chart-card
           :chart-data="getMostCommonSkills.data"
           :chart-options="getMostCommonSkills.settings.options"
-          :chart-responsive-options="getMostCommonSkills.settings.responsiveOptions"
+          :chart-responsive-options="
+            getMostCommonSkills.settings.responsiveOptions
+          "
           :chart-type="'Bar'"
           data-background-color="red"
         >
@@ -49,7 +51,9 @@
         <chart-card
           :chart-data="getCompensationRange.data"
           :chart-options="getCompensationRange.settings.options"
-          :chart-responsive-options="getCompensationRange.settings.responsiveOptions"
+          :chart-responsive-options="
+            getCompensationRange.settings.responsiveOptions
+          "
           :chart-type="'Bar'"
           data-background-color="purple"
         >
@@ -75,7 +79,8 @@ export default {
       "getMostCommonSkills",
       "getMoreOpenTo",
       "getRemoter",
-      "getCompensationRange"])
+      "getCompensationRange"
+    ])
   },
   mounted() {
     this.getMetrics();

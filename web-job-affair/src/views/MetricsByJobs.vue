@@ -28,7 +28,6 @@
           </template>
         </chart-card>
       </div>
-      
     </div>
 
     <div class="md-layout">
@@ -45,7 +44,7 @@
           </template>
         </chart-card>
       </div>
-      
+
       <div class="md-layout-item">
         <chart-card
           :chart-data="getWantedSkills.data"
@@ -76,7 +75,8 @@ export default {
       "getOrganization",
       "getRemote",
       "getWantedSkills",
-      "getTypes"])
+      "getTypes"
+    ])
   },
   mounted() {
     this.getMetrics();

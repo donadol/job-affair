@@ -70,7 +70,12 @@ export default {
      */
     initChart(Chartist) {
       var chartIdQuery = `#${this.chartId}`;
-      Chartist[this.chartType](chartIdQuery, this.chartData, this.chartOptions, this.chartResponsiveOptions);
+      Chartist[this.chartType](
+        chartIdQuery,
+        this.chartData,
+        this.chartOptions,
+        this.chartResponsiveOptions
+      );
     },
     /***
      * Assigns a random id to the chart
@@ -104,7 +109,7 @@ export default {
 };
 </script>
 <style scoped>
-  .ct-chart {
-    height: 300px;
-  }
+.ct-chart {
+  height: 300px;
+}
 </style>

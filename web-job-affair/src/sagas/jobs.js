@@ -4,7 +4,6 @@ import { SEARCH_API } from "@/config/constants";
 
 export function* handleGetJobs({ payload }) {
   try {
-    console.log(payload)
     const size = payload.size;
     const offset = payload.offset;
 
@@ -16,9 +15,8 @@ export function* handleGetJobs({ payload }) {
         aggregate: "false"
       }
     });
-    
-    var jobs = res.data;
 
+    var jobs = res.data;
     if (jobs.results && jobs.results.lenght === 0) {
       jobs = {
         aggregators: {},
@@ -64,7 +62,6 @@ export function* handleGetMetrics() {
     yield put({ type: "jobs/error", payload: e });
   }
 }
-
 
 export default function* jobs() {
   yield takeLatest("jobs/getJobs", handleGetJobs);
