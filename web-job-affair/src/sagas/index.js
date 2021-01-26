@@ -1,3 +1,5 @@
 import jobs from "./jobs";
 import people from "./people";
-export default [jobs, people];
+import job from "./job";
+
+export default [jobs, people, job];
