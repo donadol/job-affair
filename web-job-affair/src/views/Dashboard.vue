@@ -6,15 +6,18 @@
         v-for="job in this.results"
         :key="job.id"
       >
-        <job-card
-          :type="job.type"
-          :title="job.objective"
-          :date="job.deadline"
-          :image="
-            job.organizations.lenght > 0 ? null : job.organizations[0].picture
-          "
-        >
-        </job-card>
+        <div @click="goToJob(job.id)">
+          <job-card
+            :type="job.type"
+            :title="job.objective"
+            :date="job.deadline"
+            :organization="job.organizations[0].name"
+            :image="
+              job.organizations.lenght > 0 ? null : job.organizations[0].picture
+            "
+          >
+          </job-card>
+        </div>
       </div>
     </div>
     <div class="button">
@@ -51,15 +54,18 @@ export default {
       }
 
       this.getJobs({ size: 9, offset: this.size });
+    },
+    goToJob(id) {
+      this.$router.push({ path: `/jobs/${id}` });
     }
   }
 };
 </script>
 
 <style scoped>
-  .button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 </style>
