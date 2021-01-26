@@ -13,6 +13,9 @@ import SimpleTable from "./Tables/SimpleTable.vue";
 import UserCard from "./UserProfile/UserCard.vue"
 import EditProfileForm from "./UserProfile/EditProfileForm.vue"
 
+// Job
+import JobProfile from "./JobProfile/JobProfile.vue";
+
 export {
   ChartCard,
   NavTabsCard,
@@ -22,5 +25,6 @@ export {
   OrderedTable,
   SimpleTable,
   UserCard,
-  EditProfileForm
+  EditProfileForm,
+  JobProfile
 };
