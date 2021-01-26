@@ -4,7 +4,6 @@
       :sidebar-item-color="sidebarBackground"
       :sidebar-background-image="sidebarBackgroundImage"
     >
-      <mobile-menu slot="content"></mobile-menu>
       <sidebar-link to="/dashboard">
         <md-icon>dashboard</md-icon>
         <p>Dashboard</p>
@@ -37,14 +36,12 @@
 import TopNavbar from "./TopNavbar.vue";
 import ContentFooter from "./ContentFooter.vue";
 import DashboardContent from "./Content.vue";
-import MobileMenu from "@/layout/MobileMenu.vue";
 
 export default {
   components: {
     TopNavbar,
     DashboardContent,
-    ContentFooter,
-    MobileMenu
+    ContentFooter
   },
   data() {
     return {
