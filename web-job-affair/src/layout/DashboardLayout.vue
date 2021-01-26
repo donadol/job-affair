@@ -14,11 +14,11 @@
       </sidebar-link>
       <sidebar-link to="/metrics-by-people">
         <md-icon>query_stats</md-icon>
-        <p>Metrics by people</p>
+        <p>People metrics</p>
       </sidebar-link>
       <sidebar-link to="/metrics-by-jobs">
         <md-icon>query_stats</md-icon>
-        <p>Metrics by jobs</p>
+        <p>Jobs metrics</p>
       </sidebar-link>
     </side-bar>
 

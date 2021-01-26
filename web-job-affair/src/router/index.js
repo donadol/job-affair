@@ -24,12 +24,12 @@ const routes = [
       },
       {
         path: "metrics-by-people",
-        name: "Metrics By People",
+        name: "People metrics",
         component: MetricsByPeople
       },
       {
         path: "metrics-by-jobs",
-        name: "Metrics By Jobs",
+        name: "Jobs metrics",
         component: MetricsByJobs
       },
       {
