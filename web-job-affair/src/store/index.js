@@ -5,13 +5,15 @@ import sagas from "@/sagas";
 
 import jobs from "@/store/modules/jobs";
 import people from "@/store/modules/people";
+import job from "@/store/modules/job";
 
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
   modules: {
     jobs,
-    people
+    people,
+    job
   }
 });
 
