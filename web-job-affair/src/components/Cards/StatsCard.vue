@@ -1,5 +1,5 @@
 <template>
-  <md-card class="md-card-stats">
+  <md-card class="md-card-stats" md-with-hover>
     <md-card-header :data-background-color="dataBackgroundColor">
       <slot name="header"></slot>
     </md-card-header>
