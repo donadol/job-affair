@@ -4,6 +4,7 @@ import Dashboard from "@/views/Dashboard.vue";
 import UserProfile from "@/views/UserProfile.vue";
 import MetricsByPeople from "@/views/MetricsByPeople.vue";
 import MetricsByJobs from "@/views/MetricsByJobs.vue";
+import JobInfo from "@/views/JobInfo.vue";
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
         path: "metrics-by-jobs",
         name: "Metrics By Jobs",
         component: MetricsByJobs
+      },
+      {
+        path: "jobs/:id",
+        name: "Job Information",
+        component: JobInfo
       }
     ]
   }
