@@ -14,6 +14,7 @@ import UserCard from "./UserProfile/UserCard.vue"
 import EditProfileForm from "./UserProfile/EditProfileForm.vue"
 
 // Job
+import CompanyProfile from "./JobProfile/CompanyProfile.vue";
 import JobProfile from "./JobProfile/JobProfile.vue";
 
 export {
@@ -26,5 +27,6 @@ export {
   SimpleTable,
   UserCard,
   EditProfileForm,
+  CompanyProfile,
   JobProfile
 };
