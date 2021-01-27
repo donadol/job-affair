@@ -1,5 +1,10 @@
 export const defaultState = {
-  person: {},
+  person: {
+    professionalHeadline: '',
+    picture: '',
+    summaryOfBio: '',
+    name: ''
+  },
   error: null
 };
 
