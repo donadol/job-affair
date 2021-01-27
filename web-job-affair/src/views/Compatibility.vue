@@ -4,7 +4,7 @@
       <div class="md-layout-item md-medium-size-100 md-size-66">
         <search-form 
 					data-background-color="green"
-					@clicked="getCompatibility"
+					@clicked="calculateCompatibility"
 				> </search-form>
       </div>
 
@@ -46,6 +46,7 @@ export default {
   methods: {
 		...mapActions("job", ["getJob"]),
 		...mapActions("user", ["getUser"]),
+		...mapActions("compatibility", ["getCompatibility"]),
     getDescription() {
       if (this.details == undefined) {
         return "";
@@ -73,9 +74,10 @@ export default {
 
       return this.organizations[0].picture;
 		},
-		getCompatibility (username, opportunityid) {
+		calculateCompatibility (username, opportunityid) {
 			this.getJob(opportunityid);
 			this.getUser(username);
+			this.getCompatibility({ jobid: opportunityid, username: username })
 		}
   }
 };
