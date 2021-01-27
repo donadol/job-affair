@@ -41,8 +41,8 @@ export default {
   },
   data() {
     return {
-      username: "lauradonado",
-      opportunityid: "awy3q2rN"
+      username: "",
+      opportunityid: ""
     };
   },
   methods: {
