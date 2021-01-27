@@ -31,6 +31,8 @@ import MaterialDashboard from "./material-dashboard";
 
 import Chartist from "chartist";
 
+import VueEllipseProgress from "vue-ellipse-progress";
+
 // configure router
 const router = new VueRouter({
   routes, // short for routes: routes
@@ -43,6 +45,7 @@ Vue.use(VueRouter);
 Vue.use(MaterialDashboard);
 Vue.use(GlobalComponents);
 Vue.use(GlobalDirectives);
+Vue.use(VueEllipseProgress);
 
 /* eslint-disable no-new */
 new Vue({
