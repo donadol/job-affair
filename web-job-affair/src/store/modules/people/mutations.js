@@ -12,4 +12,4 @@ export const updateMetrics = function(state, people) {
 
 export const error = function(state, error) {
   state.error = error;
-}
+};

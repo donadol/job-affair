@@ -7,4 +7,4 @@ export const update = function(state, job) {
 
 export const error = function(state, error) {
   state.error = error;
-}
+};

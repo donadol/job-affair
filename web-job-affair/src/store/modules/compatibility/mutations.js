@@ -5,4 +5,4 @@ export const update = function(state, compatibility) {
 
 export const error = function(state, error) {
   state.error = error;
-}
+};

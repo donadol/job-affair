@@ -7,14 +7,18 @@ export function* handleGetCompatibility({ payload }) {
     const res = yield call(Request.get, `compatibility`, {
       baseURL: COMPATIBILITY_API,
       params: {
-          jobid: payload.jobid,
-          username: payload.username
+        jobid: payload.jobid,
+        username: payload.username
       }
     });
 
     var compatibility = res.data;
 
-    if (compatibility.message && (compatibility.message === "not found" || compatibility.message === "API not working.")) {
+    if (
+      compatibility.message &&
+      (compatibility.message === "not found" ||
+        compatibility.message === "API not working.")
+    ) {
       compatibility = {
         match: 0,
         skills: []

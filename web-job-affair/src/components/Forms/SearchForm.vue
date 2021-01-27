@@ -21,7 +21,9 @@
             </md-field>
           </div>
           <div class="md-layout-item md-size-100 text-right">
-            <md-button class="md-raised md-success" @click="getCompatibility()">Search</md-button>
+            <md-button class="md-raised md-success" @click="getCompatibility()"
+              >Search</md-button
+            >
           </div>
         </div>
       </md-card-content>
@@ -43,9 +45,9 @@ export default {
       opportunityid: "awy3q2rN"
     };
   },
-   methods: {
-    getCompatibility () {
-      this.$emit('clicked', this.username, this.opportunityid);
+  methods: {
+    getCompatibility() {
+      this.$emit("clicked", this.username, this.opportunityid);
     }
   }
 };

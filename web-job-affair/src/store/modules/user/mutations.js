@@ -4,4 +4,4 @@ export const update = function(state, user) {
 
 export const error = function(state, error) {
   state.error = error;
-}
+};

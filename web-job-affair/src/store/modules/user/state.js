@@ -1,9 +1,9 @@
 export const defaultState = {
   person: {
-    professionalHeadline: '',
-    picture: '',
-    summaryOfBio: '',
-    name: ''
+    professionalHeadline: "",
+    picture: "",
+    summaryOfBio: "",
+    name: ""
   },
   error: null
 };

@@ -11,4 +11,4 @@ export const updateMetrics = function(state, jobs) {
 
 export const error = function(state, error) {
   state.error = error;
-}
+};
