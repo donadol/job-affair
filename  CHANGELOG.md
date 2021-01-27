@@ -1,8 +1,18 @@
 # Change Log
 
+## [1.0.8] 2021-01-26
+
+- Compatibility function implemented.
+- Test function.
+
+## [1.0.7] 2021-01-26
+
+- Add view for compatibility results.
+- Test view.
+
 ## [1.0.6] 2021-01-25
 
-- Fill the README
+- Fill the README.
 
 ## [1.0.5] 2021-01-25
 
