@@ -3,6 +3,7 @@ import requests
 from flask import Blueprint, request, make_response, jsonify
 
 compatibility_bp = Blueprint('compatibility_bp', __name__)
+headers = {'Content-Type': 'applicaton/json', 'Access-Control-Allow-Origin': 'https://job-affair.herokuapp.com'}
 
 
 def job_user_info(job_id, username):
@@ -13,13 +14,13 @@ def job_user_info(job_id, username):
         return make_response(
             jsonify(
                     {"message": "not found"}
-                ), 404)
+                ), 404, headers)
 
     if job_resp.status_code != 200 or user_resp.status_code != 200:
         return make_response(
             jsonify(
                     {"message": "API not working"}
-                ), 400)
+                ), 400, headers)
 
     user_strs = user_resp.json()['strengths']
     user_ints = user_resp.json()['interests']
@@ -58,4 +59,4 @@ def compatibility_test():
         found = False
         total = total + 1
 
-    return make_response(jsonify({'match': float(count / total) * 100, 'skills': match}), 200)
+    return make_response(jsonify({'match': float(count / total) * 100, 'skills': match}), 200, headers)
