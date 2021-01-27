@@ -8,3 +8,7 @@ export const update = function(state, jobs) {
 export const updateMetrics = function(state, jobs) {
   state.aggregators = jobs.aggregators === undefined ? {} : jobs.aggregators;
 };
+
+export const error = function(state, error) {
+  state.error = error;
+}

@@ -4,3 +4,7 @@ export const update = function(state, job) {
   state.details = job.details === undefined ? [] : job.details;
   state.organizations = job.organizations == undefined ? [] : job.organizations;
 };
+
+export const error = function(state, error) {
+  state.error = error;
+}

@@ -9,3 +9,7 @@ export const updateMetrics = function(state, people) {
   state.aggregators = people.aggregators === undefined ? {} : people.aggregators;
   state.total = people.total === undefined ? 0 : people.total;
 };
+
+export const error = function(state, error) {
+  state.error = error;
+}

@@ -2,7 +2,8 @@ export const defaultState = {
   objective: "",
   details: [],
   commitment: {},
-  organizations: []
+  organizations: [],
+  error: null
 };
 
 export default {
