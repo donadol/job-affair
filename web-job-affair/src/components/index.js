@@ -10,12 +10,14 @@ import OrderedTable from "./Tables/OrderedTable.vue";
 import SimpleTable from "./Tables/SimpleTable.vue";
 
 // User
-import UserCard from "./UserProfile/UserCard.vue"
-import EditProfileForm from "./UserProfile/EditProfileForm.vue"
+import UserCard from "./UserProfile/UserCard.vue";
 
 // Job
 import CompanyProfile from "./JobProfile/CompanyProfile.vue";
 import JobProfile from "./JobProfile/JobProfile.vue";
+
+// Forms
+import SearchForm from "./Forms/SearchForm.vue";
 
 export {
   ChartCard,
@@ -26,7 +28,7 @@ export {
   OrderedTable,
   SimpleTable,
   UserCard,
-  EditProfileForm,
   CompanyProfile,
-  JobProfile
+  JobProfile,
+  SearchForm
 };
