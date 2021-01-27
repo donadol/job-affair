@@ -1,6 +1,6 @@
 export const defaultState = {
-  match: Number,
-  skills: [],
+  match: 0,
+  skills: undefined,
   error: null
 };
 
