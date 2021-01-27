@@ -7,6 +7,7 @@ import jobs from "@/store/modules/jobs";
 import people from "@/store/modules/people";
 import job from "@/store/modules/job";
 import user from "@/store/modules/user";
+import compatibility from "@/store/modules/compatibility";
 
 Vue.use(Vuex);
 
@@ -15,7 +16,8 @@ const store = new Vuex.Store({
     jobs,
     people,
     job,
-    user
+    user,
+    compatibility
   }
 });
 
