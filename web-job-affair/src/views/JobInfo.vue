@@ -2,7 +2,8 @@
   <div class="content">
     <div class="md-layout">
       <div class="md-layout-item md-medium-size-100 md-size-66">
-        <job-profile data-background-color="green"
+        <job-profile
+          data-background-color="green"
           :title="objective"
           :type="commitment.code"
           :responsabilities="getResponsabilities()"
@@ -14,9 +15,10 @@
           :teamculture="getTeamCulture()"
           :teamstructure="getTeamStructure()"
           :additional="getAdditional()"
-        > </job-profile>
+        >
+        </job-profile>
       </div>
-      <div class="md-layout-item md-medium-size-100 md-size-33" >
+      <div class="md-layout-item md-medium-size-100 md-size-33">
         <company-profile
           :title="getCompanyName()"
           :description="getDescription()"
@@ -29,7 +31,7 @@
 </template>
 
 <script>
-import { CompanyProfile, JobProfile } from "@/components"
+import { CompanyProfile, JobProfile } from "@/components";
 import { mapActions, mapState } from "vuex";
 
 export default {
@@ -50,7 +52,7 @@ export default {
         return "";
       }
 
-      for(let detail of this.details){
+      for (let detail of this.details) {
         if (detail.code == "reason") {
           return detail.content;
         }
@@ -78,9 +80,11 @@ export default {
         return responsabilities;
       }
 
-      for(let detail of this.details){
+      for (let detail of this.details) {
         if (detail.code == "responsibilities") {
-          detail.content.split("\n").forEach(responsabilities.add, responsabilities)
+          detail.content
+            .split("\n")
+            .forEach(responsabilities.add, responsabilities);
         }
       }
 
@@ -92,7 +96,7 @@ export default {
         return benefits;
       }
 
-      for(let detail of this.details){
+      for (let detail of this.details) {
         if (detail.code == "benefits") {
           benefits.add(detail.content);
         }
@@ -106,7 +110,7 @@ export default {
         return stockcompensations;
       }
 
-      for(let detail of this.details){
+      for (let detail of this.details) {
         if (detail.code == "stock-compensations") {
           stockcompensations.add(detail.content);
         }
@@ -120,9 +124,9 @@ export default {
         return requirements;
       }
 
-      for(let detail of this.details){
+      for (let detail of this.details) {
         if (detail.code == "requirements") {
-          detail.content.split("\n").forEach(requirements.add, requirements)
+          detail.content.split("\n").forEach(requirements.add, requirements);
         }
       }
 
@@ -134,9 +138,9 @@ export default {
         return challenges;
       }
 
-      for(let detail of this.details){
+      for (let detail of this.details) {
         if (detail.code == "challenges") {
-          detail.content.split("\n").forEach(challenges.add, challenges)
+          detail.content.split("\n").forEach(challenges.add, challenges);
         }
       }
 
@@ -147,9 +151,9 @@ export default {
         return "";
       }
 
-      for(let detail of this.details){
+      for (let detail of this.details) {
         if (detail.code == "career-path") {
-          return detail.content
+          return detail.content;
         }
       }
 
@@ -160,9 +164,9 @@ export default {
         return "";
       }
 
-      for(let detail of this.details){
+      for (let detail of this.details) {
         if (detail.code == "team-culture") {
-          return detail.content
+          return detail.content;
         }
       }
 
@@ -173,9 +177,9 @@ export default {
         return "";
       }
 
-      for(let detail of this.details){
+      for (let detail of this.details) {
         if (detail.code == "team-structure") {
-          return detail.content
+          return detail.content;
         }
       }
 
@@ -187,14 +191,14 @@ export default {
         return additional;
       }
 
-      for(let detail of this.details){
+      for (let detail of this.details) {
         if (detail.code == "additional") {
-          detail.content.split("\n").forEach(additional.add, additional)
+          detail.content.split("\n").forEach(additional.add, additional);
         }
       }
 
       return additional;
-    },
+    }
   },
   data() {
     return {};

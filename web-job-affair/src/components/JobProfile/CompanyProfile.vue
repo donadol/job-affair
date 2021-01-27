@@ -6,11 +6,13 @@
 
     <md-card-content>
       <h6 class="category text-gray">Company</h6>
-      <h4 class="card-title">{{title}}</h4>
+      <h4 class="card-title">{{ title }}</h4>
       <p class="card-description">
-        {{description}}
+        {{ description }}
       </p>
-      <md-button class="md-round md-success" disabled>More about the company</md-button>
+      <md-button class="md-round md-success" disabled>
+        More about the company
+      </md-button>
     </md-card-content>
   </md-card>
 </template>
