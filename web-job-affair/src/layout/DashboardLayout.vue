@@ -8,9 +8,9 @@
         <md-icon>dashboard</md-icon>
         <p>Dashboard</p>
       </sidebar-link>
-      <sidebar-link to="/user">
-        <md-icon>person</md-icon>
-        <p>User Profile</p>
+      <sidebar-link to="/compatibility">
+        <md-icon>favorite</md-icon>
+        <p>Compatibility</p>
       </sidebar-link>
       <sidebar-link to="/metrics-by-people">
         <md-icon>query_stats</md-icon>

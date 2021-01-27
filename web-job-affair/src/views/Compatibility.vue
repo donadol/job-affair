@@ -1,0 +1,82 @@
+<template>
+  <div class="content">
+    <div class="md-layout">
+      <div class="md-layout-item md-medium-size-100 md-size-66">
+        <search-form 
+					data-background-color="green"
+					@clicked="getCompatibility"
+				> </search-form>
+      </div>
+
+      <div class="md-layout-item md-medium-size-100 md-size-33">
+        <company-profile
+					v-show="objective!=''"
+          :title="getCompanyName()"
+          :description="getDescription()"
+          :image="getImage()"
+        >
+        </company-profile>
+        <user-card
+					v-show="person.name!=''"
+          :headline="person.professionalHeadline"
+          :name="person.name"
+          :description="person.summaryOfBio"
+					:image="person.picture"
+        >
+        </user-card>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import { UserCard, CompanyProfile, SearchForm } from '@/components';
+import { mapActions, mapState } from "vuex";
+
+export default {
+  components: {
+    UserCard,
+		CompanyProfile,
+		SearchForm
+  },
+  computed: {
+		...mapState("user", ["person"]),
+		...mapState("job", ["objective","details", "organizations"])
+  },
+  methods: {
+		...mapActions("job", ["getJob"]),
+		...mapActions("user", ["getUser"]),
+    getDescription() {
+      if (this.details == undefined) {
+        return "";
+			}
+
+      for (let detail of this.details) {
+        if (detail.code == "reason") {
+          return detail.content;
+        }
+      }
+
+      return "";
+    },
+    getCompanyName() {
+      if (this.organizations == undefined || this.organizations.length == 0) {
+        return "";
+      }
+
+      return this.organizations[0].name;
+    },
+    getImage() {
+      if (this.organizations == undefined || this.organizations.length == 0) {
+        return "";
+      }
+
+      return this.organizations[0].picture;
+		},
+		getCompatibility (username, opportunityid) {
+			this.getJob(opportunityid);
+			this.getUser(username);
+		}
+  }
+};
+</script>

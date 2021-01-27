@@ -1,7 +1,7 @@
 import DashboardLayout from "@/layout/DashboardLayout.vue";
 
 import Dashboard from "@/views/Dashboard.vue";
-import UserProfile from "@/views/UserProfile.vue";
+import Compatibility from "@/views/Compatibility.vue";
 import MetricsByPeople from "@/views/MetricsByPeople.vue";
 import MetricsByJobs from "@/views/MetricsByJobs.vue";
 import JobInfo from "@/views/JobInfo.vue";
@@ -18,9 +18,9 @@ const routes = [
         component: Dashboard
       },
       {
-        path: "user",
-        name: "User Profile",
-        component: UserProfile
+        path: "compatibility",
+        name: "Compatibility Test",
+        component: Compatibility
       },
       {
         path: "metrics-by-people",
