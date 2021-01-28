@@ -1,5 +1,11 @@
 # Change Log
 
+
+## [1.0.9] 2021-01-27
+
+- Deploy frontend and backend
+- Test webapp.
+
 ## [1.0.8] 2021-01-26
 
 - Compatibility function implemented.
