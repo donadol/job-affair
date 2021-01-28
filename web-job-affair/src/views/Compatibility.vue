@@ -32,6 +32,7 @@
             </vue-ellipse-progress>
 
             <div class="alert alert-info md-size-33">
+              <h4>Matching skills:</h4>
               <span v-for="skill in skills" :key="skill"> • {{ skill }} </span>
             </div>
           </md-card-content>
